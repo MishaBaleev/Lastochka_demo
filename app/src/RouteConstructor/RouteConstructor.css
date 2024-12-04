@@ -1,0 +1,210 @@
+.container--inner2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container__field--fly_sequence.with_checkbox{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.container__field--fly_sequence.with_checkbox label{
+  margin-bottom: 0;
+}
+.container__field--fly_sequence.with_checkbox  .input--fly_sequence{
+  width: auto;
+  margin-left: 10px;
+}
+.input--fly_sequence--span{
+  width: 21px;
+  color: #ffffff;
+  font-size: 14px;
+}
+/*  */
+.selector {
+  display: flex;
+  position: relative;
+  background-color: inherit;
+}
+.selector.active {
+  background-color: #5a5a5a!important;
+}
+.heading--task{
+  color: white;
+  padding: 15px 10px;
+  display: block;
+  width: 100%;
+  transition-duration: .7s;
+}
+.heading--task:hover,
+.heading--task:focus{
+  color: white;
+  background-color: #5a5a5a!important;
+  text-decoration: none;
+}
+.heading--task h6{
+  margin: 0;
+}
+.container__item--selected {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+}
+.container__item--selected.active {
+  max-height: fit-content;
+  padding-bottom: 15px;
+}
+.container__field--fly_sequence{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: wheat;
+}
+.container__field--fly_sequence label{
+  text-align: center;
+  font-size: 14px;
+}
+.container__input--fly_sequence.complex{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* .container__input--fly_sequence::after{
+  position: absolute;
+  bottom: 1px;
+  right: 6px;
+  width: 15px;
+  height: 25px;
+  color: #000000;
+}
+.container__input--fly_sequence.uncomplex::after{
+  right: 22px;
+}
+.container__input--fly_sequence.meters::after{
+  content: "м";
+}
+.container__input--fly_sequence.degrees::after{
+  content: "\B0";
+}
+.container__input--fly_sequence.ms::after{
+  content: "м/c";
+  right: 32px;
+}
+.container__input--fly_sequence.sec::after{
+  content: "сек";
+  right: 32px;
+} */
+.input--fly_sequence{
+  font-size: 14px;
+  width: 100%;
+}
+.input--fly_sequence--complex1{
+  overflow: hidden;
+  width: 75%!important;
+  width: 140px!important;
+  padding: 0;
+  -webkit-appearance: none;
+  margin-right: 15px;
+  height: 15px;
+  background-color: #5a5a5a;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.input--fly_sequence--complex1::-webkit-slider-runnable-track {
+  height: 15px;
+  -webkit-appearance: none;
+  color: #3a9d3a;
+  margin-top: 0px;
+}
+.input--fly_sequence--complex1::-webkit-slider-thumb {
+  width: 15px;
+  -webkit-appearance: none;
+  height: 15px;
+  cursor: ew-resize;
+  background: #ffffff;
+  border-radius:10px;
+  box-shadow: -90px 0 0 80px #3a9d3a;
+}
+.input--fly_sequence--complex1::-moz-range-progress {
+  background-color: #3a9d3a;
+}
+.input--fly_sequence--complex1::-moz-range-track {
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+.input--fly_sequence--complex1::-ms-fill-lower {
+  background-color: #3a9d3a;
+}
+.input--fly_sequence--complex1::-ms-fill-upper {
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.input--fly_sequence--complex2{
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  padding: 0!important;
+  margin-right: 5px;
+  width: 50px;
+}
+.input--fly_sequence--complex2::-webkit-outer-spin-button,
+.input--fly_sequence--complex2::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0; 
+}
+.sphereRC{
+  margin: 0;
+  padding: 0;
+}
+
+.textRC{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 3px;
+  font-size: 15px;
+  color: #ffffff;
+  background: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  animation: animationWarning 1.5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+@keyframes animationWarning {
+  0% {
+    background: #7c7c7c;
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: #7c7c7c;
+  }
+}
+
+.descriptionRC{
+  width: 200px;
+  opacity: 0;
+  color: #ffffff;
+  font-weight: 500;
+  position: absolute;
+  background-color: #383838;
+  border: #ffffff solid 1px;
+  border-radius: 10px;
+  padding: 5px;
+  transition-duration: 0.7s;
+}
+
+.textRC:hover{
+  color: #ffffff;
+  text-decoration: none;
+  cursor: default;
+}
+.textRC:hover ~ .descriptionRC{
+  opacity: 1;
+}

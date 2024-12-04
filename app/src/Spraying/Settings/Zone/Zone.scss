@@ -1,0 +1,198 @@
+@import "../../mixin.scss";
+
+.zone{
+    li{ 
+        padding: 10px 0;
+        list-style-type: none;
+        width: 90%;
+        border: 2px dashed whitesmoke;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .name{
+            position: relative;
+            width: 100%;
+            @include flexContainerCenterWrap();
+            p{
+                @include bText(25, 10);
+                margin: 0
+            }
+            .marker_set{
+                position: absolute;
+                left: 20px;
+                width: 35px;
+                height: 35px;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                @include flexContainerCenterWrap();
+                background-color: transparent;
+                border-radius: 6px;
+                border: 2px solid whitesmoke;
+                transition-duration: .4s;
+                &.active{
+                    background-color: #4CAF50;
+                }
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+        select{
+            width: 70%;
+            height: 30px;
+            margin-top: 10px;
+            @include text(20, 10);
+            text-align: center;
+            color: #1E1E1E;
+            border: none;
+            border-radius: 6px;
+            &:focus{outline: none}
+        }
+        .coords{
+            width: 100%;
+            margin-top: 15px;
+            @include flexContainerCenterWrap();
+            justify-content: space-around;
+            .coord{
+                width: 46%;
+                height: 30px;
+                @include flexContainerCenterWrap();
+                .coord_item{
+                    width: 30%;
+                    height: 100%;
+                    border: 2px dashed whitesmoke;
+                    border-right: none;
+                    box-sizing: border-box;
+                    border-radius: 6px 0 0 6px;
+                    @include flexContainerCenterWrap();
+                    p{
+                        margin: 0;
+                        @include text(20, 10);
+                    }
+                }
+                input{
+                    width: calc(70% - 10px);
+                    height: 100%;
+                    border: none;
+                    padding: 0 5px;
+                    border-radius: 0 6px 6px 0;
+                    text-align: center;
+                    @include text(18, 10);
+                    color: #1E1E1E;
+                    &::-webkit-inner-spin-button{opacity: 1};
+                    &:focus{outline: none;}
+                }
+            }
+        }
+        .set{
+            width: 90%;
+            height: 30px;
+            margin: 10px 0 0 0;
+            padding: 0;
+            border: none;
+            @include text(20, 10);
+            color: #1E1E1E;
+            transition-duration: .4s;
+            &:hover{
+                background-color: rgb(75, 75, 75);
+                color: whitesmoke;
+            }
+        }
+
+        &.flex{
+            @include flexContainerCenterWrap();
+            flex-direction: row;
+            justify-content: space-around;
+            .left_name{
+                width: 40%;
+                p{
+                    @include text(15, 10);
+                    margin: 0;
+                }
+                &.norm{
+                    p{
+                        @include text(20, 10);
+                        margin: 0;
+                    }
+                }
+                &.big{
+                    width: 80%;
+                    p{
+                        @include text(23, 10);
+                        margin: 0;
+                    }
+                }
+            }
+            input[type=range]{
+                width: 30%;
+                background-color: transparent;
+                -webkit-appearance: none;
+                &:hover{
+                    cursor: pointer;
+                }
+                &::-webkit-slider-runnable-track{
+                    -webkit-appearance: none;
+                    height: 10px;
+                    border-radius: 5px;
+                    background-color: gray;
+                }
+                &::-webkit-slider-thumb{
+                    -webkit-appearance: none;
+                    background-color: whitesmoke;
+                    width: 10px;
+                    height: 20px;
+                    border-radius: 5px;
+                    margin-top: -5px;
+                }
+            }
+            input[type=number]{
+                width: 15%;
+                border-radius: 6px;
+                border: none;
+                padding: 0 5px;
+                height: 30px;
+                @include text(18, 10);
+                color: #1E1E1E;
+                text-align: center;
+                &:focus{outline: none;}
+                &::-webkit-inner-spin-button{opacity: 1;}
+            }
+            input[type=checkbox]{
+                width: 30px;
+                height: 30px;
+                margin: 0;
+                border-radius: 6px;
+                accent-color: #4CAF50;
+                &:hover{cursor: pointer;}
+            }
+        }
+
+        &.remove_poly{
+            padding: 0;
+            height: 40px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                height: 40px;
+                width: 100%;
+                padding: 0;
+                border: none;
+                transition-duration: .4s;
+                &:hover{
+                    background-color: rgb(75, 75, 75);
+                    p{color: whitesmoke;}
+                }
+                p{
+                    margin: 0;
+                    @include text(25, 10);
+                    color: #1E1E1E;
+                }
+            }
+        }
+    }
+}

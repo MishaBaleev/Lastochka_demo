@@ -1,0 +1,175 @@
+
+.container--main{
+  width: 100vw;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  background-color: rgb(35 35 35 / 90%);
+  /* background-color: rgb(137, 137, 137); */
+}
+ul, ol{
+  list-style: none;
+}
+.container--map{
+  margin: auto;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  /* display: block; */
+  /* position: fixed!important;
+  top: 60px;
+  left: 0; */
+}
+.container--map.hidden{
+  display: none;
+  /* opacity: 0; */
+}
+.mapboxgl-ctrl-bottom-left{
+  display: none;
+}
+/* .mapboxgl-canvas{
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+} */
+
+
+
+
+
+
+
+
+button{
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 13px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #a4afba;  
+	border-radius: 3px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation; 
+	background-color: #eee;
+	border-color: #eee;
+	color: #444;
+}
+
+
+.mapboxgl-ctrl-bottom-right{
+  display: none;
+}
+.icons{
+  width: 35px;
+  height: auto;
+}
+.App {
+  text-align: center;
+}
+
+.map-container{
+  width: 100vw;
+  height: calc(100vh - 55px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+.interface{
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 55px);
+}
+.main--main{
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+button{
+  display: inline-block;
+  box-sizing: border-box;
+  outline: none;
+  height: 45px;
+  font-weight: 500;
+  text-decoration: none;
+  user-select: none;
+  background-color: #eee;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  transition-duration: 0.7s;
+}
+button:hover,
+button:focus{
+  background-color: #bababa;
+}
+
+.bad_device{
+  .default_cmp{
+    width: 100%;
+    height: 100vh;
+    background-color: #444;
+    .window{
+      width: 100%;
+      .title{
+        font-size: 20px;
+      }
+      .text{
+        font-size: 15px;
+      }
+      ul{
+        li{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

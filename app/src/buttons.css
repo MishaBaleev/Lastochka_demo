@@ -1,0 +1,75 @@
+.button--hid{
+  z-index: 1000;
+  width: 35px;
+  height: 50px;
+}
+
+.button-all{
+  display: flex;
+}
+.hidden--constr{
+  position: absolute;
+  /* left: -700px; */
+  background-color: #5a5a5a;
+  animation: antianimation--hidden1 .7s forwards;
+  width: 500px;
+  z-index: 999;
+}
+.button__advice_gif{
+  width: 70%;
+}
+.button__name--heading{
+  color: #ffffff;
+  padding: 0px 10px;
+  line-height: 50px;
+  padding-left: 10px;
+  font-weight: 700;
+  margin: 0;
+  background-color: #5a5a5a;
+}
+.button__container--advice {
+  margin-bottom: 0px;
+  padding: 0 5px;
+  font-size: 15px;
+  position: absolute;
+  background-color: #ffffff;
+  transition-duration: 0.7s;
+  z-index: 1000;
+}
+.button__container--advice p{
+  margin: 10px auto;
+  color: #000000;
+}
+.button--hid:hover~.hidden--constr {
+  animation: animation--hidden1 .7s forwards;
+}
+.button_important--advice{
+  margin-top: 0!important;
+  color: red!important
+}
+
+@keyframes animation--hidden1{
+  from{
+    opacity: 0;
+    left: calc(-110% - 500px);
+    /* width: 600px */
+  }
+  to{
+    opacity: 1;
+    left: 110%;
+    /* width: 600px; */
+  }
+}
+
+@keyframes antianimation--hidden1{
+  from{
+    opacity: 1;
+    left: 110%;
+    /* width: 600px; */
+  }
+  to{
+    opacity: 0;
+    left: calc(-110% - 500px);
+    /* width: 600px; */
+  }
+}

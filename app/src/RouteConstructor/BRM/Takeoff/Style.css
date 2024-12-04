@@ -1,0 +1,24 @@
+.mapboxgl-marker.takeoff{
+  top: 6px;
+}
+.mapbox_gl_active_indicator{
+  width: 130%;
+  height: 130%;
+  position: absolute;
+  top: -9px;
+  left: -5px;
+  border: 0px solid white;
+  border-radius: 23px;
+}
+.marker_active_indicator--active{
+  border: 3px solid white;
+  animation: marker_active_indicator_activate .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+@keyframes marker_active_indicator_activate {
+  from {
+    border: 0px solid white;
+  }
+  to {
+    border: 3px solid white;
+  }
+}

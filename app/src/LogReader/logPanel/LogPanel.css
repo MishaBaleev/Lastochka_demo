@@ -1,0 +1,462 @@
+.section--logs{
+  position: absolute;
+  top: 0;
+  height: calc(100vh - 60px);
+  width: 25%;
+  z-index: 1;
+  background: #00000033;
+}
+
+.section--logs.inactive{
+  animation: section--logs--active .4s forwards;
+}
+.section--logs.active{
+  animation: section--logs--unactive .4s forwards;
+}
+@keyframes section--logs--active{
+  from {
+    right: 0;
+  }
+  to{
+    right: -25%;
+  }
+}
+@keyframes section--logs--unactive{
+  from{
+    right: -25%;
+  }
+  to{
+    right: 0;
+  }
+}
+
+.main--title{
+  background: #5a5a5a;
+  padding: 10px;
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+  border-bottom: 0.1em solid #6e6e6e;
+}
+.frame--number{
+  padding: 5px;
+  margin:0;
+  font-size: 20px;
+  color: #ffffff;
+  border-bottom: 0.1em solid #6e6e6e;
+}
+.log--datetime{
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  margin-left: 60px;
+  font-size: 25px;
+  color: #ffffff;
+  border-bottom: 0.1em solid #6e6e6e;
+}
+
+.button--logs,
+.logreader__button--settings{
+  transition-duration: 1s;
+  height: 70px;
+  width: 35px;
+  position: absolute;
+  left: -35px;
+  top: calc(50vh - 55px);
+  border: 0;
+  outline: none;
+  background-color: #232323;
+  border-radius: 20px 0px 0px 20px;
+}
+.logreader__button--settings{
+  top: 0px;
+}
+.logreader__button--settings img{
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
+.button--logs:focus{
+  outline: none;
+  background-color: inherit;
+}
+.button--logs::before{
+  content: "";
+  width: 5px;
+  height: 30px;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  background: #ffffff;
+  transform: rotate(30deg);
+  border-radius: 15px;
+}
+.button--logs::after{
+  content: "";
+  width: 5px;
+  height: 30px;
+  position: absolute;
+  top: 31px;
+  right: 15px;
+  background: #ffffff;
+  transform: rotate(-30deg);
+  border-radius: 15px;
+}
+.button--logs.inactive::before{
+  transform: rotate(30deg);
+  animation: inverse_button_active_before1 .4s cubic-bezier(0.4, 0, 1, 1);
+}
+.button--logs.inactive::after{
+  transform: rotate(-30deg);
+  animation: inverse_button_active_after1 .4s cubic-bezier(0.4, 0, 1, 1);
+}
+.button--logs.active::before{
+  transform: rotate(-30deg);
+  animation: button--panel_active_before1 .4s cubic-bezier(0.4, 0, 1, 1);
+}
+.button--logs.active::after{
+  transform: rotate(30deg);
+  animation: button--panel_active_after1 .4s cubic-bezier(0.4, 0, 1, 1);
+}
+/* upper part button */
+@keyframes button--panel_active_before1{
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes inverse_button_active_before1{
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+  /* bottom part button */
+@keyframes button--panel_active_after1{
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+@keyframes inverse_button_active_after1{
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+.logs--list{
+  overflow-y: scroll;
+  height: calc(100vh - 200px);
+  display: flex;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 15px 0;
+  list-style: none;
+}
+.logs--list::-webkit-scrollbar,
+.logreader__groups__list::-webkit-scrollbar{
+  width: 3px;
+  background-color: #6e6e6e;
+} 
+
+.logs--list--item{
+  background: #0000008c;
+  width: 95%;
+  margin: 5px 0;
+  padding-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.logreader__groups__heading--main{
+  width: 100%;
+  background: #232323;
+  font-size: 19px;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+.logreader__groups__heading--secondary{
+  width: 100%;
+  background: #232323;
+  font-size: 17px;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+.item--title--main{
+  background: #232323;
+  font-size: 19px;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  /* margin-bottom: 10px; */
+}
+
+.item--title{
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+.item--description{
+  width: 100%;
+  margin: auto;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destructViewOK{
+  color:#00ff00;
+}
+.destructViewDanger{
+  color: #ff0000;
+}
+
+.coords{
+  font-size: 16px;
+}
+
+.battery{
+  height: 40px
+}
+.battery--color{
+  position: relative;
+  height: 40px
+}
+.battery--percent{
+  position: relative;
+  top: -35px;
+  color: #ffffff;
+  mix-blend-mode: difference;
+  font-weight: 700;
+}
+.batteryView10{
+  background-color: #00ff00;
+}
+.batteryView9{
+  background: #00ff00;
+}
+.batteryView8{
+  background: #6fed00;
+}
+.batteryView7{
+  background: #98db00;
+}
+.batteryView6{
+  background: #bdc700;
+}
+.batteryView5{
+  background: #cdb200;
+}
+.batteryView4{
+  background: #df9b00;
+}
+.batteryView3{
+  background: #ee8200;
+}
+.batteryView2{
+  background: #f86600;
+}
+.batteryView1{
+  background: #fe4400;
+}
+.batteryView0{
+  background: #ff0000;
+}
+
+.logpanel__wrapper--title{
+  width: 100%;
+  position: relative;
+}
+.logpanel__button--delete-custom{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logpanel__button--delete-custom:hover,
+.logpanel__button--delete-custom:focus{
+  cursor: pointer;
+}
+
+
+/* .logpanel__label--groups{
+  display: none
+} */
+.logpanel__img--groups{
+  width: 35px;
+  height: auto;
+  filter: invert(1);
+}
+.logpanel__img--groups.ulg{
+  filter: none;
+}
+.logpanel__list--groups{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  position: absolute;
+  outline: none;
+  left: -43px;
+  top: 90px;
+}
+.logpanel__item--groups{
+  transition-duration: 1s;
+  border: 0;
+  outline: none;
+  padding: 4px;
+  background-color: #5a5a5a
+}
+.logpanel__item--groups:hover,
+.logpanel__item--groups:focus{
+  cursor: pointer;
+  background-color: #232323; 
+}
+.logpanel__item--groups.active:hover,
+.logpanel__item--groups.active:focus{
+  cursor: default;
+}
+.logpanel__item--groups.active{
+  background-color: #232323; 
+}
+.logpanel__label--groups{
+  width: 100%;
+  position: absolute;
+  left: 100%;
+  background-color: #ffffff;
+  animation: antianimation--hidden .7s forwards;
+  z-index: 999;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-39px);
+}
+.logpanel__item--groups.inactive:hover .logpanel__label--groups{
+  animation: animation--hidden .7s forwards;
+}
+.logpanel__item--groups.inactive:hover .logpanel__label--groups__blocks{
+  animation: animation--hidden--groups .7s forwards;
+}
+.logpanel__item--groups.active .logpanel__label--groups__blocks{
+  display: none;
+}
+.logpanel__label--groups__blocks{
+  position: absolute;
+  right: 100%;
+  background-color: #ffffff;
+  animation: antianimation--hidden--groups .7s forwards;
+  z-index: 999;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-39px);
+}
+.logreader__container--charts{
+  /*Убрать*/
+  /* width: 250px;  */
+  height: 120px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+}
+.logpanel__label--groups__blocks span{
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  display: inline-block;
+}
+.logpanel__label--groups__blocks span:hover{
+  cursor: pointer;
+  background-color: #bababa;
+}
+.logpanel__item--groups:nth-child(1){
+  border-radius: 10px 0px 0px 0px;
+}
+.logpanel__item--groups:nth-last-child(1){
+  border-radius: 0px 0px 0px 10px;
+}
+.logreader__groups__list{
+  display: flex;
+  padding: 0;
+  margin: 10px 0;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: calc(50vh - 88px);
+}
+.item--description.OK{
+  color:#00ff00;
+}
+.item--description.Danger{
+  color: #ff0000;
+}
+/* .logreader__groups__list:nth-child(1){
+  height: 85vh;
+  border-bottom: 3px solid #232323;
+} */
+@keyframes animation--hidden{
+  from{
+    opacity: 0;
+    left: 100%;
+    width: 100px;
+  }
+  to{
+    opacity: 1;
+    left: -100px;
+    width: 100px;
+  }
+}
+@keyframes antianimation--hidden{
+  from{
+    opacity: 1;
+    left: -100px;
+    width: 100px;
+  }
+  to{
+    opacity: 0;
+    left: 100%;
+    width: 100px;
+  }
+}
+
+@keyframes animation--hidden--groups{
+  from{
+    opacity: 0;
+    right: 100%;
+  }
+  to{
+    opacity: 1;
+    right: -100%;
+  }
+}
+@keyframes antianimation--hidden--groups{
+  from{
+    opacity: 1;
+    right: -100%;
+  }
+  to{
+    opacity: 0;
+    right: 100%;
+  }
+}

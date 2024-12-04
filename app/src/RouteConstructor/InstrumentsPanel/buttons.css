@@ -1,0 +1,50 @@
+.button--instrument{
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  transition-duration: .7s;
+}
+.button--instrument a{
+  color: #000000;
+}
+.button--instrument:hover,
+.button--instrument:focus{
+  background: #c4c3c3;
+  color: #000000;
+  text-decoration: none;
+}
+.button--instrument:hover a,
+.button--instrument:focus a{
+  text-decoration: none;
+  color: #000000;
+}
+.button--instrument.active{
+  background-color: #5a5a5a!important;
+}
+.button--instrument.used{
+  background-color: #232323!important;
+}
+
+.button--instrument.used a{
+  color: #ffffff;
+}
+
+.button--instrument .button__icon--instrument{
+  margin-top: 4px;
+  width: 25px;
+  height: auto;
+  filter: invert(0);
+}
+/* .instrument__button:hover .button__icon--instrument,
+.instrument__button:focus .button__icon--instrument{
+  
+} */
+.button--instrument.active .button__icon--instrument{
+  filter: invert(1);
+}
+.button--instrument.used .button__icon--instrument{
+  filter: invert(1);
+}

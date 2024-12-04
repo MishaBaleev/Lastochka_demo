@@ -1,0 +1,270 @@
+.navigateLog--main{
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: auto;
+  background-color: #00000033;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  padding: 10px;
+}
+button:focus{
+  outline: none;
+}
+.navigateLog--main.activeNav{
+  animation: sectionActive .4s forwards;
+}
+.navigateLog--main.unactiveNav{
+  animation: sectionUnActive .4s forwards;
+}
+@keyframes sectionActive{
+  from{
+    bottom: -30%;
+  }
+  to{
+    bottom: 0;
+  }
+}
+@keyframes sectionUnActive{
+  from{
+    bottom: 0;
+  }
+  to{
+    bottom: -30%;
+  }
+}
+.navigateLog--main .activateButton{
+  position: absolute;
+  bottom: 100%;
+  left: calc(50% - 35px);
+  background-color: #232323;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  width: 70px;
+  height: 35px;
+}
+.navigateLog--main .activateButton:focus{
+  outline: none;
+}
+.navigateLog--main .activateButton:hover{
+  background-color: #bababa;
+}
+.navigateLog--main .activateButton::before{
+  content: "";
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  background: #ffffff;
+  transform: rotate(30deg);
+  border-radius: 15px;
+}
+.navigateLog--main .activateButton::after{
+  content: "";
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  background: #ffffff;
+  transform: rotate(-30deg);
+  border-radius: 15px;
+}
+.navigateLog--main .activateButton.unactiveNav::before{
+  animation: inverse_button_active_before2 .4s forwards;
+}
+.navigateLog--main .activateButton.unactiveNav::after{
+  animation: inverse_button_active_after2 .4s forwards;
+}
+.navigateLog--main .activateButton.activeNav::before{
+  animation: button--panel_active_before2 .4s forwards;
+}
+.navigateLog--main .activateButton.activeNav::after{
+  animation: button--panel_active_after2 .4s forwards;
+}
+/* upper part button */
+@keyframes button--panel_active_before2{
+  from {
+    transform: rotate(-30deg)
+  }
+  to {
+    transform: rotate(30deg)
+  }
+}
+@keyframes inverse_button_active_before2{
+  from {
+    transform: rotate(30deg)
+  }
+  to {
+    transform: rotate(-30deg)
+  }
+}
+  /* bottom part button */
+@keyframes button--panel_active_after2{
+  from {
+    transform: rotate(30deg)
+  }
+  to {
+    transform: rotate(-30deg)
+  }
+}
+@keyframes inverse_button_active_after2{
+  from {
+    transform: rotate(-30deg)
+  }
+  to {
+    transform: rotate(30deg)
+  }
+}
+
+.navigateLog--main .logInfo{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+}
+.navigateLog--main .logInfo h3{
+  margin: 0;
+  margin-right: 30px;
+  font-size: 30px;
+  color: #ffffff;
+  border-bottom: 2px solid grey;
+}
+.navigateLog--main .logInfo .button--delete{
+  margin-right: 10px;
+}
+.navigateLog--main input{
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-appearance: none;
+}
+.navigateLog--main input::-webkit-slider-runnable-track{
+  height: 15px;
+  background-color: grey;
+  margin-top: 0;
+}
+.navigateLog--main input::-webkit-slider-thumb{
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: -560px 0 0 550px #3a9d3a;
+}
+
+.navigateLog--main .controls{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.navigateLog--main .controls .buttons{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.navigateLog--main .controls .buttons h3{
+  width: 100%;
+  color: #ffffff;
+  /* border-bottom: 2px solid grey; */
+  font-size: 25px;
+  /* margin-bottom: 10px; */
+  /* padding-bottom: 10px; */
+}
+.navigateLog--main .controls .buttons button{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0
+}
+.navigateLog--main .controls .buttons .navigate::after{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: #232323;
+}
+.navigateLog--main .controls .buttons .navigate::before{
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: 4px solid black;
+  border-left: none;
+  border-bottom: none;
+}
+.navigateLog--main .controls .buttons .navigate.next::before{
+  rotate: 45deg;
+}
+.navigateLog--main .controls .buttons .navigate.prev::before{
+  rotate: -135deg;
+}
+.navigateLog--main .controls .buttons button:not(:last-child){
+  margin-right: 20px;
+}
+.navigateLog--main .controls .buttons .button--manage--log img{
+  width: 40px;
+  height: 40px;
+}
+
+.navigateLog--main .speed{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.navigateLog--main .speed h3{
+  width: 100%;
+  color: #ffffff;
+  /* border-bottom: 2px solid grey; */
+  /* box-sizing: border-box; */
+  font-size: 20px;
+  /* margin-bottom: 10px; */
+  /* padding-bottom: 10px; */
+}
+.navigateLog--main .speed .input--block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigateLog--main .speed .input--block .range{
+  width: 50%;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.navigateLog--main .speed .input--block .number{
+  position: relative;
+  width: 50px;
+  margin: 0;
+  border: none;
+  width: 40px;
+  text-align: center;
+  border-radius: 5px;
+}
+.navigateLog--main .speed .input--block .number::-webkit-outer-spin-button,
+.navigateLog--main .speed .input--block .number::-webkit-inner-spin-button{
+  opacity: 1;
+}

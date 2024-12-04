@@ -1,0 +1,46 @@
+.modal__window{
+  position: fixed;
+  background-color: #ffffff;
+  color:black;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  box-shadow: 7px 7px 7px 0px rgb(0 0 0 / 62%);
+  /* transition-duration: .7s; */
+  animation: example .3s linear;
+  opacity: 0;
+}
+.modal__window.active{
+  z-index: 1000;
+  opacity: 1;
+}
+@keyframes example {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.button__modal--close{
+  border: 0;
+  padding: 2px;
+  position: absolute;
+  background-color: crimson;
+  top: 0;
+  right: -35px;
+  transition-duration: .7s;
+  box-shadow: 7px 7px 7px 0px rgb(0 0 0 / 62%);
+}
+.button__modal--close img{
+  width: 25px;
+}
+.button__modal--close:hover,
+.button__modal--close:focus{
+  background-color: #b10f2e;
+  cursor:pointer
+}
+.modal__heading{
+  font-size: 20px;
+}
+.modal__text{
+  font-size: 14px;
+  margin: 0;
+}

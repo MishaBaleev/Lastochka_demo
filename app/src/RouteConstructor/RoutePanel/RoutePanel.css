@@ -1,0 +1,189 @@
+.flysequence__panel{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #00000033;
+  height: calc(100vh - 70px);
+  width: 250px;
+}
+.flysequence__subpanel{
+  background-color: #b2b2b2;
+  padding: 15px;
+  font-size: 16px;
+}
+.list__task--seguence{
+  list-style: none;
+    width: 100%;
+    padding: 0;
+    overflow-y: scroll;
+    height: calc(80vh - 110px);
+}
+.list__task--seguence::-webkit-scrollbar  {
+    width: 3px;              
+  }
+  .list__task--seguence::-webkit-scrollbar {  
+    background-color: #6e6e6e;     
+}
+.list__task--seguence::-webkit-scrollbar-thumb {
+    background: #d3d0ce;   
+    border-radius: 20px;       
+    border: 3px solid #d3d0ce; 
+}
+.list__task--seguence li{
+  background-color: #383838;
+  margin-bottom: 10px;
+}
+.task__heading{
+  color: white;
+  padding: 15px 10px;
+  display: block;
+  width: 100%;
+  transition-duration: .7s;
+}
+.task__heading:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #5a5a5a!important;
+}
+.task__heading:focus{
+  text-decoration: none;
+  color: white;
+}
+.task__heading h6{
+  margin: 0;
+}
+.selector.active{
+  background-color: #5a5a5a!important;
+}
+.container--input{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: wheat;
+}
+.container--input label{
+  font-size: 14px;
+}
+.container--input input{
+  font-size: 14px;
+  padding-right: 40px;
+}
+.label--meters::before{
+  content: "м";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 25px;
+  top: 33px;
+  color: #000000;
+}
+.label--degrees::before{
+    content: "\B0";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 21px;
+    top: 32px;
+    color: #000000;
+}
+.label--secs:before{
+    content: "сек";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 31px;
+    top: 32px;
+    color: #000000;
+}
+.label--msec:before{
+    content: "м\\с";
+    width: 26px;
+    height: 12px;
+    position: absolute;
+    right: 12px;
+    top: 32px;
+    color: #000000;
+}
+.selector{
+  display: flex;
+  position: relative;
+  background-color: inherit;
+}
+.icon--delete{
+  width: 22px;
+}
+.button--delete_task{
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+.button--delete_task:hover .icon--delete{
+  -webkit-filter: invert(25%);
+  filter: invert(25%);
+}
+.label--hidden{
+  display: none;
+}
+.button--import-mission{
+  margin-bottom: 5px;
+}
+.button--save-mission, .button--import-mission{
+  width: 100%;
+  padding: 8px;
+  box-shadow: 0;
+  border: 0;
+  background-color: white;
+  border-radius: 5px;
+}
+#button--import-mission{
+  display: none;
+}
+.container--selected_item{
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+}
+.container--selected_item.active{
+  max-height: fit-content;
+  padding-bottom: 15px;
+}
+
+
+.flysequence--heading__container{
+  background-color: #b2b2b2;
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding: 15px;
+}
+.flysequence--heading__container h4{
+  margin: 0;
+  background-color: #b2b2b2;
+  padding: 15px;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.flysequence--heading__container input{
+  border: 0;
+  text-align: center;
+}
+
+.warning--div{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  margin: 11px 10px 10px;
+  border-radius: 15px;
+  animation: warning--active 1.5s infinite forwards
+}
+@keyframes warning--active{
+  0%{
+    background-color: #7c7c7c;;
+  }
+  50%{
+    background-color: red;
+  }
+  100%{
+    background-color: #7c7c7c ;
+  }
+}

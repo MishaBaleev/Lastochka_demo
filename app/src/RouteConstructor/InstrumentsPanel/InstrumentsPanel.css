@@ -1,0 +1,25 @@
+.section--instruments{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.list--instruments{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.item--instruments{
+  margin-bottom: 5px;
+}
+/* .list--instruments li a{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: #ffffff;
+  transition-duration: .7s;
+}
+.list--instruments li a:hover{
+  background: rgb(178,178,178);
+} */

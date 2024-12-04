@@ -1,0 +1,99 @@
+.container__form--log{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 60px;
+  background-color: #0000007a;
+  z-index: 1000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container__input--log{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container__form--log.hide{
+  display: none;
+}
+.container__input--log--icon{
+  padding: 10px;
+  background-color: white;
+  width: 80px;
+  /* height: auto; */
+}
+.battery--color{
+  width: 100%!important;
+}
+.container__input--log--icon img{
+  width: 100%;
+  height: auto;
+}
+#file-log-input{
+  display: none;
+}
+.container__input--log label{
+  width: fit-content;
+}
+.log_file--input--message{
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.container--inner.error{
+	background: linear-gradient(135deg, rgb(57 57 57), rgb(57 57 57),#6f1e1e);
+  background-size: 400% 400%;
+  animation: gradient 2s ease;
+  /* background-position: 0% 0%; */
+}
+.logreader__button--import{
+  /* font-weight: 500; */
+  transition-duration: .7s;
+  /* color: white; */
+  /* text-decoration: underline; */
+}
+.logreader__button--import:hover, .logreader__button--import:focus{
+  cursor: pointer;
+  /* color: #e0e0e0 */
+}
+.logreader__message--logpreload{
+  margin-bottom: 25px;
+}
+.logreader__message--logpreload--main{
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 15px
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
+.hiddenLayers{
+  opacity: 0;
+}
+
+.sphere{
+  position: relative;
+}
+.sphere img{
+
+}
+.sphere span{
+  position: absolute;
+  right: 12.5px;
+  top: 3px;
+  font-size: 18px;
+  color: black;
+}

@@ -1,0 +1,59 @@
+
+.menu__item--active{
+  background-color: #0000002b;
+  text-decoration: none;
+}
+.menu__item--active{
+  cursor: default;
+}
+.menu--button{
+  position: relative;
+}
+.menu--button::after{
+  height: 100%;
+  content: attr(data-hint);
+  position: absolute;
+  width: max-content; 
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  background: rgb(255 255 255);
+  color: #000;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  animation: antiAnimateHint 0.4s forwards; 
+  left: -300%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.menu--button:hover::after {
+  animation: animateHint 0.4s forwards;
+  cursor: default;
+  /* left: calc(100% + 20px); */
+  opacity: 1;
+}
+@keyframes animateHint{
+  from{
+    left: -300%;
+    opacity: 0;
+  }
+  to{
+    left: 100%;
+    opacity: 1;
+  }
+}
+@keyframes antiAnimateHint{
+  from{
+    left: calc(100% + 20px);
+    opacity: 1;
+  }
+  to{
+    left: -300%;
+    opacity: 0;
+  }
+}
